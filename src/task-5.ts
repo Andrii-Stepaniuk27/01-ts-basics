@@ -1,15 +1,11 @@
-interface Status {
-  status: "loading" | "success" | "error";
-}
-
-function logStatus(status: Status) {
-  if (status.status === "loading") {
+function logStatus(status: "loading" | "success" | "error") {
+  if (status === "loading") {
     console.log("Loading...");
-  } else if (status.status === "success") {
+  } else if (status === "success") {
     console.log("Success!");
-  } else if (status.status === "error") {
+  } else if (status === "error") {
     console.log("Something went wrong");
   }
 }
 
-logStatus({ status: "loading" });
+logStatus("loading");
